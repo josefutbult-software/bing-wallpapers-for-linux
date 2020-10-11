@@ -28,6 +28,9 @@ size="1920x1200"
 # Collection Path.
 path="$HOME/Pictures/Bing/"
 
+# Set lightdm login background
+set_lightdm=true
+
 # Make it run just once (useful to run as a cron)
 run_once=false
 while getopts "1" opt; do
@@ -87,6 +90,9 @@ do
 
   # Saving Image to collection.
   curl -L -s -o $path$imgName $reqImgURL
+  
+  # Copying the image to a none persistant file 
+  cp $path$imgName "$path""today$extn"
 
   # Logging.
   echo "Saving image to $path$imgName"
