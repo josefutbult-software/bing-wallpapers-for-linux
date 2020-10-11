@@ -42,6 +42,9 @@ This will run every 6 hours. You can use [this link](http://www.crontab-generato
 
 *Note: If you installed this package from apt, then disable the startup script setup by default. Go to startup applications and remove 'bingwallpaper'*
 
+## Changing lightdm login background
+When using lightdm as display-manager, you can set the login screens background to todays image by installing ``lightdm-gtk-greeter``, run ``lightdm-gtk-greeter-settings``, select Image under the Background section and select ``/home/<user>/Pictures/Bing/today.jpg``
+
 ## Contributing
 Feel free to make changes and send PR, I'll be accepting them.
 
